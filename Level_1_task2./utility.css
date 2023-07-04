@@ -1,0 +1,46 @@
+/*i made this utility css  cause  i have to use elements like flex
+ box alot of times to make it easy i am make another css file*/
+.flex{
+    display: flex;
+}
+.items-centre{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.btn{
+    padding: 0.8rem 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-primary{
+    background: var(--primary);
+    color: var(--dark);
+    transition: all .3s ease;
+}
+.btn-primary:hover{
+    background: transparent;
+    border-color:var(--primary);
+    color: var(--primary);
+}
+.btn-sec{
+    background: transparent;
+    color: var(--primary);
+    border-color:var(--primary) ;
+}
+.btn-sec:hover{
+    background:var(--primary) ;
+    color: var(--dark);
+}
+/* aita ki kore? */
+.flex-1{
+    flex: 1;
+}
+.justify-centre{
+    justify-content: center;
+}

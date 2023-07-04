@@ -1,0 +1,274 @@
+@import 'utility.css';
+/*we are creating variable for colors*/
+:root{
+    --primary:#219ebc;
+    --dark:#023047;
+    --pure:#fff;
+    --surface-color:#023047 ;
+    --curve: 40;
+}
+body{
+    font-family: 'poppins',sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+}
+header{
+    background: var(--dark);
+    height: 100vh;
+    clip-path: polygon(0 0,100% 0,100% 100%,84% 88%,45% 99%,20% 86%,0 100%);
+}
+header .container{
+    position: fixed;
+
+}
+.container{
+
+    height: 100vh;
+    width: 100vw;
+    /* max-width: 1152px; */
+    padding: 0 15px;
+    margin: 0 auto;
+}
+header nav .left a{
+    color: var(--pure);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+header nav .left a:hover{
+    color: var(--primary);
+}
+header nav{
+    padding: 2rem 0;
+}
+/* header nav .logo{ */
+    /* margin-right: 3rem; */
+
+.hero .left img{
+    width: 400px;
+   /* mix-blend-mode:difference;
+   background-color: #000000; */
+   /* border-radius: 18px;
+   border:10px solid var(--primary); */
+   border-radius: 18px;
+   border:10px solid var(--primary);
+   /* width: 2px */
+   padding-block: 20px;/*top and bottm*/
+   padding-inline: 20px;/*lest and right*/
+  
+}
+.hero .right{
+    color:var(--pure);
+}
+.hero .right h6{
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+.hero .right h2{
+    font-size: 2.8rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.hero .right h2 span{
+    color: var(--primary);
+}
+/* .hero .right p{
+    korte hobe aita
+} */
+/* .hero .left{
+    border-radius: 18px;
+    border:10px solid var(--primary);
+    /* width: 2px */
+.container .logo img{
+    width: 100px;
+}
+section{
+    padding: 6rem 0;
+}
+section.about img{  
+    width: 400px;
+    height: 450px;
+    border-radius: 18px;
+    border:10px solid var(--primary);
+    padding-block: 20px;/*top and bottm*/
+    padding-inline: 20px;
+}
+section h1{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+section h1 span{
+    color: var(--primary);
+}
+section h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+section.about .text{
+    color: var(--pure);
+}
+section.about p{
+    font-family: 'lato',sans-serif;
+    color: var(--pure);   
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+section.about .social a{ 
+    /* background: var(--dark); */
+    /* padding-top: 1rem; */
+    /* margin-top: 2000rem; icons gulo niche jache na about me like ta theke a tag target korlem still */
+    color: var(--dark);
+    border-radius: 20%;
+    line-height: 2rem;
+    padding: 10px;
+    margin-right: 0.6rem;
+    transition: all .3s ease;
+}
+section.about .social a:hover{
+    border-radius: 50%;
+    background-color: var(--primary);
+   
+}
+section.about .social a .fa-brands{
+    margin-top: 4rem;
+    padding: 0.5rem;
+}
+section.exp .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+    height: 300px;
+  }
+  
+section.exp .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+section.exp .card__image {      
+    width: 100%;
+    height:400px;
+  }
+  
+section.exp  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+ 
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+section.exp .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+section.exp .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+section.exp .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+/* section.exp .card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }        */
+  
+  section.exp.card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  section.exp .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+  }
+  section.exp .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #8ecae6;
+  }
+  
+  section.exp .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";  
+    font-size: .8em; 
+    color: #D7BDCA;  
+  }
+  
+  section.exp .card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+  }
+  
+  section.exp .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #D7BDCA;
+    -webkit-box-orient: vertical;
+  
+    overflow: hidden;
+  }    
+section.exp .heading{
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+}
+section.exp p{
+    font-family: 'Lato',sans-serif;
+    text-align: center;
+    margin-bottom: 1rem ;
+}
+.color .contact{
+    position: relative;
+    height: 400px;
+    width: 100vw;
+    color: #fff;
+    background-color: #1a1a1a;
+    text-align: center;
+    padding-top: 2rem;
+}
+section.about{
+    background: var(--dark);
+    /* clip-path: polygon(0 0,100% 0,100% 100%,84% 88%,45% 99%,20% 86%,0 100%); */
+    /* clip-path: polygon(0 0,100% 0); */
+    clip-path: polygon(0 0,20% 14%,45% 2%,84% 12%,100% 0,100% 100%,0 100%);
+ 
+}
